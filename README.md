@@ -1,1 +1,2 @@
-# Logistic_Regression_Model-master
+# Logistic_Regression_Model on digits
+
