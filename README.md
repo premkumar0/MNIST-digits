@@ -1,2 +1,5 @@
-# Logistic_Regression_Model on digits
+# Deep learning Techniques on MNIST digits
+
+### applied logistic regression 
+### applied CNN 
 
