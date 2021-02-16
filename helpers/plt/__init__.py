@@ -16,6 +16,21 @@ def show_example(example, label, dim=(28, 28)):
     plt.yticks([])
     plt.show()
 
+
+def plot_train_digits(images,labels):
+    plt.figure(figsize=(10,10))
+    for i in range(25):
+        plt.subplot(5,5,i+1)
+        plt.xticks([])
+        plt.yticks([])
+        plt.grid(False)
+        plt.imshow(images[i].squeeze(2), cmap='Greys')
+        # The CIFAR labels happen to be arrays, 
+        # which is why you need the extra index
+        plt.xlabel(labels[i])
+    plt.show()
+
+    
 def show_ten_examples(examples, labels, preds):
     """
     Display 10 examples along with their labels.
@@ -57,3 +72,17 @@ def plot_metrics(model):
     plt.title('Loss: {:.3f}'.format(losses[-1]))
 
     plt.show()
+
+def plot_accuracies(history):
+    """
+    plot graph for accuracy and loss
+    """
+    plt.plot(history.history['accuracy'], label='accuracy')
+    plt.plot(history.history['val_accuracy'], label = 'val_accuracy')
+    plt.xlabel('Epoch')
+    plt.ylabel('Accuracy')
+    plt.ylim([0.5, 1])
+    plt.legend(loc='lower right')
+
+    plt.show()
+

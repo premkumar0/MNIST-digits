@@ -1,6 +1,10 @@
 import numpy as np
 from tensorflow.keras.datasets import mnist
 
+def load_data():
+    """loads the data of mnist dataset"""
+    return mnist.load_data()
+
 def get_data():
     """
     Returns (x_train, y_train), (x_test, y_test)
